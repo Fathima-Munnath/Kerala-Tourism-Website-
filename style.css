@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav a.login {
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a.signup {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('https://media.easemytrip.com/media/Blog/India/638230439303406485/638230439303406485lfGmRK.png') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-buttons .learn-more {
+    background: white;
+    color: green;
+    border: 1px solid green;
+}
+
+.hero-buttons .contact-us {
+    background: green;
+    color: white;
+}
+
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid green;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.destinations {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.destinations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid green;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: black;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid green;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img.round-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.grid-item h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 5px auto 0;
+}
+
+.see-more {
+    margin-top: 30px;
+}
+
+.see-more .btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more .btn:hover {
+    background-color: darkgreen;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+/* Styling for wide description paragraph */
+.description-paragraph {
+    font-size: 1.1rem;  /* Slightly larger font size for readability */
+    line-height: 1.6;   /* Increase line height for better text spacing */
+    margin: 20px auto;  /* Add space above and below */
+    max-width: 800px;   /* Limit the width to prevent the text from becoming too wide */
+    padding: 20px;      /* Add padding for some space around the text */
+    text-align: justify; /* Justify the text to make the alignment more even */
+    color: #333;        /* Set a dark gray text color */
+    background-color: #f9f9f9; /* Light background to make text stand out */
+    border-radius: 8px; /* Rounded corners for the paragraph container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a soft look */
+}
+
+/* Optional: Style for paragraph links inside the description */
+.description-paragraph a {
+    color: green;       /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;   /* Make links bold */
+}
+
+.description-paragraph a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+/* Styling for the form section */
+form {
+    background-color: white;       /* Light background for the form */
+    padding: 30px;                 /* Adds padding inside the form */
+    margin: 30px auto;             /* Centers the form and gives space around it */
+    max-width: 600px;              /* Limits the width of the form */
+    border-radius: 10px;           /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a clean look */
+}
+
+/* Styling for each form label */
+form label {
+    display: block;                /* Makes the label block-level to separate from input */
+    font-size: 1rem;               /* Font size for the label */
+    font-weight: bold;             /* Bold label text */
+    margin-bottom: 5px;            /* Adds space below the label */
+    color: #333;                   /* Dark color for the label */
+}
+
+/* Styling for form inputs (text, email, phone) */
+form input {
+    width: 100%;                   /* Makes the input field span the full width of the form */
+    padding: 12px;                 /* Adds padding inside the input fields */
+    margin-bottom: 20px;           /* Adds space below each input field */
+    border: 1px solid #ccc;        /* Light border around the inputs */
+    border-radius: 5px;            /* Rounded corners for the input fields */
+    font-size: 1rem;               /* Font size for the input text */
+    color: #333;                   /* Text color inside the input */
+}
+
+form input:focus {
+    outline: none;                 /* Removes the default outline */
+    border-color: green;           /* Adds green border when the input is focused */
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.2); /* Subtle green glow when focused */
+}
+
+/* Styling for the form submit button */
+form button {
+    background-color: green;       /* Green background for the submit button */
+    color: white;                  /* White text for the button */
+    padding: 15px 30px;            /* Adds padding to the button */
+    font-size: 1.2rem;             /* Larger font size */
+    border: none;                  /* No border around the button */
+    border-radius: 5px;            /* Rounded corners for the button */
+    cursor: pointer;               /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+form button:hover {
+    background-color: darkgreen;   /* Dark green when hovered */
+}
+
+/* Optional: Styling for form input placeholders */
+form input::placeholder {
+    color: #999;                   /* Light gray color for placeholder text */
+    font-style: italic;             /* Italic placeholder text */
+}
+.about{
+    text-align: center;
+}
+.contact h2{
+    text-align: center;
+}
+
+/* General styles for all screen sizes */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+nav .menu {
+    display: flex;
+    gap: 10px;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    /* Hamburger menu visibility */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+/* Destinations grid responsiveness */
+@media (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 993px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* General Styles for the New Page */
+header {
+    text-align: center;
+    background-color: #2c7a7b;
+    color: white;
+    padding: 20px 0;
+}
+
+.description {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.food-spots {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.food-spots ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food-spots li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/* style.css */
+
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #2c7a7b;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.description, .gallery, .food-spots {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c7a7b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #2c7a7b;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Gallery Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Food Spots Styling */
+.food-spots ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.food-spots li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #2c7a7b;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+/* Image Gallery Styling */
+.grid-container img {
+    width: 100%; /* Makes the image fit the grid column width */
+    height: 200px; /* Sets a fixed height for all images */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the area */
+    border-radius: 10px; /* Rounds the corners of the images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.grid-container img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+
